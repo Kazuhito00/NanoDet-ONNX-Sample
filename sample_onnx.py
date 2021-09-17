@@ -77,6 +77,10 @@ def main():
         nms_th=nms_th,
     )
 
+    # COCOクラスリスト読み込み
+    with open('coco_classes.txt', 'rt') as f:
+        coco_classes = f.read().rstrip('\n').split('\n')
+
     if image_path is not None:
         image = cv2.imread(image_path)
 
@@ -115,6 +119,7 @@ def main():
                 bboxes,
                 scores,
                 class_ids,
+                coco_classes,
             )
 
             # キー処理(ESC：終了) ##############################################
@@ -129,7 +134,7 @@ def main():
         cv2.destroyAllWindows()
 
 
-def draw_debug(image, elapsed_time, bboxes, scores, class_ids):
+def draw_debug(image, elapsed_time, bboxes, scores, class_ids, coco_classes):
     debug_image = copy.deepcopy(image)
 
     for bbox, score, class_id in zip(bboxes, scores, class_ids):
@@ -144,9 +149,9 @@ def draw_debug(image, elapsed_time, bboxes, scores, class_ids):
             thickness=2,
         )
 
-        # クラスID、スコア
+        # クラス、スコア
         score = '%.2f' % score
-        text = '%s:%s' % (str(class_id), score)
+        text = '%s:%s' % (str(coco_classes[class_id]), score)
         debug_image = cv2.putText(
             debug_image,
             text,
