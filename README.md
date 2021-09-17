@@ -47,7 +47,7 @@ NMSの閾値<br>
 高橋かずひと(https://twitter.com/KzhtTkhs)
  
 # License 
-MoveNet-Python-Example is under [Apache-2.0 License](LICENSE).
+NanoDet-ONNX-Sample is under [Apache-2.0 License](LICENSE).
 
 # License(Movie)
 サンプル動画は[NHKクリエイティブ・ライブラリー](https://www.nhk.or.jp/archives/creative/)の[イギリス ウースターのエルガー像](https://www2.nhk.or.jp/archives/creative/material/view.cgi?m=D0002011239_00000)を使用しています。
