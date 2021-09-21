@@ -36,6 +36,9 @@ python sample_onnx.py
 * --input_shape<br>
 モデルの入力サイズ<br>
 デフォルト：320
+* --score_th<br>
+クラス判別の閾値<br>
+デフォルト：0.35
 * --nms_th<br>
 NMSの閾値<br>
 デフォルト：0.6
