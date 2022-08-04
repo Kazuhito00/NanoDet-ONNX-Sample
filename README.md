@@ -1,3 +1,7 @@
+
+> **Warning**<br>
+> このリポジトリはNanoDet-Plusには対応していません。
+
 # NanoDet-ONNX-Sample
 [NanoDet](https://github.com/RangiLyu/nanodet)のPythonでのONNX推論サンプルです。<br>
 ONNXに変換したモデルも同梱しています。変換自体を試したい方は[Convert2ONNX.ipynb](Convert2ONNX.ipynb)を使用ください。<br>
